@@ -1,4 +1,4 @@
-const helloWorld = () => {
+const main = () => {
     /*eslint-disable no-console */
     document.getElementsByClassName('rock')[0].addEventListener('click', () => { handleClick('rock'); });
     document.getElementsByClassName('paper')[0].addEventListener('click', () => { handleClick('paper'); });
@@ -18,7 +18,7 @@ const handleClick = (userChoice) => {
 
     let content = document.getElementsByClassName('content')[0];
     let result = compare(userChoice, computerChoice);
-    content.innerHTML = `You chose ${userChoice}. The computer chose ${computerChoice}. ${result}`
+    content.innerHTML = `You chose ${userChoice}. The computer chose ${computerChoice}. ${result}`;
 
 };
 
@@ -28,10 +28,10 @@ const compare = (choice1, choice2) => {
     }
     if (choice1 === "rock") {
         if (choice2 === "scissors") {
-        // rock wins
+            // rock wins
             return "You win!";
         } else {
-        // paper wins
+            // paper wins
             return "You lose! Try again.";
         }
     }
@@ -56,4 +56,4 @@ const compare = (choice1, choice2) => {
 };
 
 
-helloWorld();
+main();

@@ -17,7 +17,7 @@ h1 {
 .content {
     margin-top: 20px;
     font-family: 'Archivo Narrow';
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
 }
 
@@ -35,30 +35,30 @@ h1 {
 
 .rock {
     grid-column: 1;
-    background-color: #378B2E;
+    background-color: #159363;
     padding: 15px 32px;
 }
 
 .rock:hover {
-    background-color: #5FAE57;
+    background-color: #339D75;
 }
 
 .paper {
     grid-column: 2;
-    background-color: #AA6A39;
+    background-color: #DA8D20;
     padding: 15px 32px;
 }
 
 .paper:hover {
-    background-color: #D4986A;
+    background-color: #E8A74C;
 }
 
 .scissors {
     grid-column: 3;
-    background-color: #862D63;
+    background-color: #C61D4A;
     padding: 15px 32px;
 }
 
 .scissors:hover {
-    background-color: #A75486;
+    background-color: #D2456B;
 }
