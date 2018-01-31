@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 #container {
     display: grid;
 }
 
 h1 {
+    font-family: 'Archivo Narrow';
     text-align: center;
+
 }
 
 .header {
-
+    font-family: Merriweather;
 }
 
 .buttons {
+    font-family: 'Archivo Narrow';
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
