@@ -21,10 +21,17 @@ h1 {
     text-align: center;
 }
 
+.winner {
+    margin-top: 40px;
+    font-family: Merriweather;
+    font-size: 40px;
+    text-align: center;
+}
+
 .buttons {
     font-family: 'Archivo Narrow';
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
     color: white;
     border: none;
@@ -61,4 +68,14 @@ h1 {
 
 .scissors:hover {
     background-color: #D2456B;
+}
+
+.simulate {
+    grid-column: 4;
+    background-color: #000;
+    padding: 15px 32px;
+}
+
+.simulate:hover {
+    background-color: #555;
 }
