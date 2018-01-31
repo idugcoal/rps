@@ -4,6 +4,21 @@ const main = () => {
     document.getElementsByClassName('paper')[0].addEventListener('click', () => { handleClick('paper'); });
     document.getElementsByClassName('scissors')[0].addEventListener('click', () => { handleClick('scissors'); });
     document.getElementsByClassName('simulate')[0].addEventListener('click', () => { handleClick('simulate'); });
+    document.getElementsByClassName('reset')[0].addEventListener('click', () => { handleReset(); });
+
+};
+
+const handleReset = () => {
+    let counter = document.getElementsByClassName('counter')[0];
+    let winner = document.getElementsByClassName('winner')[0];
+    let content = document.getElementsByClassName('content')[0];
+
+    counter.setAttribute('data-ties', 0);
+    counter.setAttribute('data-p1-wins', 0);
+    counter.setAttribute('data-p2-wins', 0);
+    content.innerHTML = '';
+    winner.innerHTML = '';
+    counter.innerHTML = '';
 };
 
 const handleClick = (userChoice) => {
@@ -16,17 +31,30 @@ const handleClick = (userChoice) => {
     }
 
     let computerChoice = getRandomChoice();
-
-    let result = compare(userChoice, computerChoice);
-    if (result === -1) {
-        result = 'Tie';
-    } else {
-        result ? result = playerNames[0] : result = playerNames[1];
-    }
+    let counter = document.getElementsByClassName('counter')[0];
     let content = document.getElementsByClassName('content')[0];
     let winner = document.getElementsByClassName('winner')[0];
+    let totalTies = parseInt(counter.getAttribute('data-ties'));
+    let p1Wins = parseInt(counter.getAttribute('data-p1-wins'));
+    let p2Wins = parseInt(counter.getAttribute('data-p2-wins'));
+
+    let result = compare(userChoice, computerChoice);
+    if (result === 'tie') {
+        result = 'Tie';
+        counter.setAttribute('data-ties', ++totalTies);
+    } else {
+        // result ? result = playerNames[0] : result = playerNames[1];
+        if (result) {
+            result = playerNames[0];
+            counter.setAttribute('data-p1-wins', ++p1Wins);
+        } else {
+            result = playerNames[1];
+            counter.setAttribute('data-p2-wins', ++p2Wins);
+        }
+    }
     content.innerHTML = `${playerNames[0]} chose ${userChoice}. ${playerNames[1]} chose ${computerChoice}.`;
     winner.innerHTML = `Winner: ${result}`;
+    counter.innerHTML = `Player 1 wins: ${p1Wins}. Player 2 wins: ${p2Wins}. Ties: ${totalTies}`;
 
 };
 
@@ -42,9 +70,10 @@ const getRandomChoice = () => {
     }
 };
 
+// return true if choice1 wins, false if choice2 wins, 'tie' if tied
 const compare = (choice1, choice2) => {
     if (choice1 === choice2) {
-        return -1;
+        return 'tie';
     }
     if (choice1 === "rock") {
         if (choice2 === "scissors") {

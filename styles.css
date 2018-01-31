@@ -15,7 +15,7 @@ h1 {
 }
 
 .content {
-    margin-top: 20px;
+    margin-top: 30px;
     font-family: 'Archivo Narrow';
     font-size: 24px;
     text-align: center;
@@ -28,10 +28,16 @@ h1 {
     text-align: center;
 }
 
+.counter {
+    margin-top: 30px;
+    font-family: 'Archivo Narrow';
+    font-size: 24px;
+}
+
 .buttons {
     font-family: 'Archivo Narrow';
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
     color: white;
     border: none;
@@ -78,4 +84,16 @@ h1 {
 
 .simulate:hover {
     background-color: #555;
+}
+
+.reset {
+    grid-column: 5;
+    background-color: #FFF;
+    padding: 15px 32px;
+    color: #000;
+    border: 1px black solid;
+}
+
+.reset:hover {
+    background-color: #AAA;
 }
