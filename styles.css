@@ -14,6 +14,13 @@ h1 {
     font-family: Merriweather;
 }
 
+.content {
+    margin-top: 20px;
+    font-family: 'Archivo Narrow';
+    font-size: 20px;
+    text-align: center;
+}
+
 .buttons {
     font-family: 'Archivo Narrow';
     display: grid;
