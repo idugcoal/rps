@@ -1,6 +1,9 @@
 const helloWorld = () => {
     /*eslint-disable no-console */
-    console.log("Everything is working!");
+    let content = document.getElementById('content');
+    content.innerHTML = 'hello';
+    console.log(content);
+
 };
 
 helloWorld();

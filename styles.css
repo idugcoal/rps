@@ -1,0 +1,52 @@
+#container {
+    display: grid;
+}
+
+h1 {
+    text-align: center;
+}
+
+.header {
+
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    color: white;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.rock {
+    grid-column: 1;
+    background-color: #378B2E;
+    padding: 15px 32px;
+}
+
+.rock:hover {
+    background-color: #5FAE57;
+}
+
+.paper {
+    grid-column: 2;
+    background-color: #AA6A39;
+    padding: 15px 32px;
+}
+
+.paper:hover {
+    background-color: #D4986A;
+}
+
+.scissors {
+    grid-column: 3;
+    background-color: #862D63;
+    padding: 15px 32px;
+}
+
+.scissors:hover {
+    background-color: #A75486;
+}
