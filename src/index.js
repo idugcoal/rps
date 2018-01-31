@@ -43,7 +43,6 @@ const handleClick = (userChoice) => {
         result = 'Tie';
         counter.setAttribute('data-ties', ++totalTies);
     } else {
-        // result ? result = playerNames[0] : result = playerNames[1];
         if (result) {
             result = playerNames[0];
             counter.setAttribute('data-p1-wins', ++p1Wins);
@@ -54,7 +53,7 @@ const handleClick = (userChoice) => {
     }
     content.innerHTML = `${playerNames[0]} chose ${userChoice}. ${playerNames[1]} chose ${computerChoice}.`;
     winner.innerHTML = `Winner: ${result}`;
-    counter.innerHTML = `Player 1 wins: ${p1Wins}. Player 2 wins: ${p2Wins}. Ties: ${totalTies}`;
+    counter.innerHTML = `<p>Player 1 wins: ${p1Wins} </p><p>Player 2 wins: ${p2Wins}</p><p>Ties: ${totalTies}</p>`;
 
 };
 
