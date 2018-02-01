@@ -19,6 +19,7 @@ h1 {
     font-family: 'Archivo Narrow';
     font-size: 24px;
     text-align: center;
+
 }
 
 .winner {
@@ -29,10 +30,13 @@ h1 {
 }
 
 .counter {
-    margin-top: 40px;
+    margin-top: 76px;
     font-family: 'Archivo Narrow';
     font-size: 24px;
     text-align: center;
+    background-color: lightgrey;
+    /*height: 60%;*/
+    box-sizing: border-box;
 }
 
 .buttons {
