@@ -52,8 +52,8 @@ const handleClick = (userChoice) => {
     }
 
     let computerChoice = getRandomChoice();
-
     let result = compare(userChoice, computerChoice);
+
     if (result === 'tie') {
         result = 'Tie';
         incrementCounter('data-ties');

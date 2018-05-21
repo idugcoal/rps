@@ -1,5 +1,10 @@
-# Vanilla-ES6-boilerplate
-Standard ES6 Boilerplate configured with babel, webpack and eslint.
+# Rock Paper Scissors
+A rock paper scissors game written in vanilla ES6 .
+
+![Rock Paper Scissors Screenshot](/assets/RPS_Screenshot.png)
+
+# Rules
+Press the Rock, Paper, or Scissors button to make your selection. The computer will make its selection, and then the results of your match will be displayed. Press the Simulate Game button to simulate a game between two computer players. Press the Reset button to reset game counters. 
 
 ## Usage
 
